@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.10.6 on darwin)" generated="20240525 11:17:33.979" rpa="false" schemaversion="4">
+<suite id="s1" name="01.LoginPage" source="/Users/apriyaldilukman/workshopCiJenkins/testcase/01.LoginPage.robot">
+<test id="s1-t1" name="User Success login" line="7">
+<kw name="Given Open web www.saucedemo.com" library="loginPages">
+<kw name="Open Browser page" library="general">
+<doc>Open the browser and navigates to the login page  ...</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240525 11:17:34.104" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg timestamp="20240525 11:17:34.105" level="INFO">Executing: /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json</msg>
+<msg timestamp="20240525 11:18:33.113" level="WARN">Unable to obtain driver using Selenium Manager: Selenium Manager failed for: /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json.
+The chromedriver version cannot be discovered</msg>
+<msg timestamp="20240525 11:18:33.115" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240525 11:18:33.117" level="FAIL">SeleniumManagerException: Message: Selenium Manager failed for: /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json.
+The chromedriver version cannot be discovered
+</msg>
+<status status="FAIL" starttime="20240525 11:17:34.104" endtime="20240525 11:18:33.121"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>${WINDOW_WIDTH}</arg>
+<arg>${WINDOW_HEIGHT}</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="NOT RUN" starttime="20240525 11:18:33.122" endtime="20240525 11:18:33.123"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" starttime="20240525 11:18:33.123" endtime="20240525 11:18:33.123"/>
+</kw>
+<kw name="Set Log Level" library="BuiltIn">
+<arg>DEBUG</arg>
+<doc>Sets the log threshold to the specified level and returns the old level.</doc>
+<status status="NOT RUN" starttime="20240525 11:18:33.123" endtime="20240525 11:18:33.123"/>
+</kw>
+<status status="FAIL" starttime="20240525 11:17:34.104" endtime="20240525 11:18:33.123"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${titlePageLogin}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240525 11:18:33.123" endtime="20240525 11:18:33.123"/>
+</kw>
+<status status="FAIL" starttime="20240525 11:17:34.103" endtime="20240525 11:18:33.124"/>
+</kw>
+<kw name="When Admin Input username &amp; password valid" library="loginPages">
+<status status="NOT RUN" starttime="20240525 11:18:33.124" endtime="20240525 11:18:33.124"/>
+</kw>
+<kw name="And Admin click button login" library="loginPages">
+<status status="NOT RUN" starttime="20240525 11:18:33.125" endtime="20240525 11:18:33.125"/>
+</kw>
+<kw name="Then Web redirect to homescreen page" library="loginPages">
+<status status="NOT RUN" starttime="20240525 11:18:33.125" endtime="20240525 11:18:33.125"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240525 11:18:33.125" endtime="20240525 11:18:33.126"/>
+</kw>
+<tag>Regression</tag>
+<status status="FAIL" starttime="20240525 11:17:34.103" endtime="20240525 11:18:33.126">SeleniumManagerException: Message: Selenium Manager failed for: /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json.
+The chromedriver version cannot be discovered
+</status>
+</test>
+<status status="FAIL" starttime="20240525 11:17:33.980" endtime="20240525 11:18:33.127"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Regression</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="01.LoginPage">01.LoginPage</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240525 11:18:33.113" level="WARN">Unable to obtain driver using Selenium Manager: Selenium Manager failed for: /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages/selenium/webdriver/common/macos/selenium-manager --browser chrome --output json.
+The chromedriver version cannot be discovered</msg>
+</errors>
+</robot>
