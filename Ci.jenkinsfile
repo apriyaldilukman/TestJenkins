@@ -1,6 +1,53 @@
-pipeline{
-  agent any
-  stages {
+pipeline {
+    agent any
+    stages {
+        stage('SCM Clone') {
+            steps {
+                git branch: 'main', url: "pipeline {
+    agent any
+    stages {
+        stage('SCM Clone') {
+            steps {
+                git branch: 'main', url: "https://github.com/apriyaldilukman/TestJenkins.git"
+            }
+        }
+
+        stage('Run Automation') {
+            steps {
+                script {
+                    echo "Executing Robot Tests..."
+                    
+                    // Run the Robot Framework test
+                    bat  'robot -d result ./Users/apriyaldilukman/TestJenkins/testcase'
+                }
+            }
+        }
+    }
     
-  }
+    post {
+        always {
+            robot outputPath:'\\result', passThreshold: 80.0, unstableThreshold: 70.0, onlyCritical: false
+        }
+    }
+}"
+            }
+        }
+
+        stage('Run Automation') {
+            steps {
+                script {
+                    echo "Executing Robot Tests..."
+                    
+                    // Run the Robot Framework test
+                    bat  'robot -d result .\\testcase\\01.LoginPage.robot'
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            robot outputPath:'\\result', passThreshold: 80.0, unstableThreshold: 70.0, onlyCritical: false
+        }
+    }
 }
