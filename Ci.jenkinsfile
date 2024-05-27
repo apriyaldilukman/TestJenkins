@@ -21,7 +21,7 @@ pipeline {
     
     post {
         always {
-            robot outputPath:'\\result', passThreshold: 80.0, unstableThreshold: 70.0, onlyCritical: false
+            robot outputPath:'//result', passThreshold: 80.0, unstableThreshold: 70.0, onlyCritical: false
         }
     }
 }
