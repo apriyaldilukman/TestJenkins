@@ -13,7 +13,7 @@ pipeline {
                     echo "Executing Robot Tests..."
                     
                     // Run the Robot Framework test
-                    sh  'robot -d result ./apriyaldilukman/TestJenkins/testcase'
+                    sh  'robot -d result ./Users/apriyaldilukman/TestJenkins'
                 }
             }
         }
